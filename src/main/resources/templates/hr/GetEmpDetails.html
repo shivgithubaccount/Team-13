@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>HR Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/leftnavbar.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Employee Management Portal</label>
+    <ul>
+        <li><a href="/">Logout</a></li>
+    </ul>
+</nav>
+<div class="sidenav">
+    <a href="/hr/addemp">Add Emp</a>
+    <a href="/hr/removeemp">Remove Emp</a>
+    <a class="active" href="/hr/empdetails">Emp Details</a>
+</div>
+
+<section class="sectiondata">
+    <h1> Emp Details</h1>
+    <table id="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+</section>
+
+<div class="status" id="status">
+
+</div>
+</body>
+<script type="text/javascript" th:src="@{/js/hr/empDetails.js}"></script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>HR Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Employee Management Portal</label>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/hr/login">HR</a></li>
+        <li><a class="active" href="/emp/login">Employee</a></li>
+    </ul>
+</nav>
+<section>
+    <div class="wrapper">
+        <div class="title">
+            Login Form
+        </div>
+        <form id="form">
+            <div class="field">
+                <input id="email" type="email" required>
+                <label>Email Address</label>
+            </div>
+            <div class="field">
+                <input type="password" id="password" required>
+                <label>Password</label>
+            </div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+           <div class="status" id="status">
+           </div>
+        </form>
+    </div>
+</section>
+<script type="text/javascript" th:src="@{/js/emp/emppage.js}"></script>
+</body>
+</html>
